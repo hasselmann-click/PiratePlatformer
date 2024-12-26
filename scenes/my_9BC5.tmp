@@ -1,12 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://cno22ff8hyawo"]
+[gd_scene load_steps=5 format=3 uid="uid://cno22ff8hyawo"]
 
 [ext_resource type="Texture2D" uid="uid://dwx5tykj3sbd" path="res://icon.svg" id="1_j2eyi"]
+[ext_resource type="PackedScene" uid="uid://bsmnpbo4nl6tt" path="res://scenes/characters/roger.tscn" id="1_qvi73"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2_513sy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2psy"]
 size = Vector2(128, 128)
 
 [node name="Node2D" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-136.0]
+
+[node name="Roger" parent="." instance=ExtResource("1_qvi73")]
+position = Vector2(0, 8)
+acceleration = 600.0
+deceleration = 1200.0
+
+[node name="Player" type="Node" parent="Roger"]
+script = ExtResource("2_513sy")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
