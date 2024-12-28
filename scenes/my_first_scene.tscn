@@ -13,6 +13,8 @@ metadata/_edit_horizontal_guides_ = [-136.0]
 [node name="Roger" parent="." instance=ExtResource("1_qvi73")]
 position = Vector2(407, 369)
 speed = 16.0
+acceleration = 32.0
+deceleration = 128.0
 
 [node name="Player" type="Node" parent="Roger"]
 script = ExtResource("2_513sy")
@@ -31,3 +33,7 @@ texture = ExtResource("1_j2eyi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
 shape = SubResource("RectangleShape2D_b2psy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(414, 435)
+zoom = Vector2(3, 3)
