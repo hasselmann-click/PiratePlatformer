@@ -19,23 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://7x8yfhcq4des" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/05-Ground/Ground 01.png" id="17_ugk6n"]
 [ext_resource type="Texture2D" uid="uid://bjt478jlhsl57" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/05-Ground/Ground 02.png" id="18_p5m0t"]
 
-[sub_resource type="Animation" id="Animation_n4dgk"]
-resource_name = "idle"
-length = 0.5
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("1_jdly6"), ExtResource("3_mvckp"), ExtResource("4_yrwqd"), ExtResource("5_tyymn"), ExtResource("6_6mrox")]
-}
-
 [sub_resource type="Animation" id="Animation_pjp6g"]
 length = 0.001
 tracks/0/type = "value"
@@ -49,39 +32,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("1_jdly6")]
-}
-
-[sub_resource type="Animation" id="Animation_34mon"]
-resource_name = "run"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("7_lep5l"), ExtResource("8_aglt3"), ExtResource("9_2hwky"), ExtResource("10_1hg51"), ExtResource("11_cv3a8"), ExtResource("12_ipgat")]
-}
-
-[sub_resource type="Animation" id="Animation_euxk7"]
-resource_name = "jump"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("13_nj6su"), ExtResource("14_t3x1a"), ExtResource("15_8g1qe")]
 }
 
 [sub_resource type="Animation" id="Animation_vxup2"]
@@ -114,6 +64,56 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [ExtResource("17_ugk6n"), ExtResource("18_p5m0t")]
+}
+
+[sub_resource type="Animation" id="Animation_n4dgk"]
+resource_name = "idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_jdly6"), ExtResource("3_mvckp"), ExtResource("4_yrwqd"), ExtResource("5_tyymn"), ExtResource("6_6mrox")]
+}
+
+[sub_resource type="Animation" id="Animation_euxk7"]
+resource_name = "jump"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("13_nj6su"), ExtResource("14_t3x1a"), ExtResource("15_8g1qe")]
+}
+
+[sub_resource type="Animation" id="Animation_34mon"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("7_lep5l"), ExtResource("8_aglt3"), ExtResource("9_2hwky"), ExtResource("10_1hg51"), ExtResource("11_cv3a8"), ExtResource("12_ipgat")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_omd33"]
