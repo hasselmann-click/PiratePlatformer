@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dctdx5yesm2a2"]
+[gd_scene load_steps=58 format=3 uid="uid://dctdx5yesm2a2"]
 
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_xdpvc"]
 [ext_resource type="PackedScene" uid="uid://b2l4op0mw14p5" path="res://scenes/dust/jump_dust.tscn" id="2_g08ls"]
@@ -13,24 +13,21 @@
 [ext_resource type="Texture2D" uid="uid://jm5m1xlicmli" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 04.png" id="11_fv3be"]
 [ext_resource type="Texture2D" uid="uid://bn8082cidpd0l" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 05.png" id="12_ma6vr"]
 [ext_resource type="Texture2D" uid="uid://ch0t80w5nyf5w" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 06.png" id="13_cty06"]
-[ext_resource type="Texture2D" uid="uid://c2emi5bakuv74" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 01.png" id="13_o0mrl"]
-[ext_resource type="Texture2D" uid="uid://biroemvrsrrpd" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 02.png" id="14_0npdc"]
 [ext_resource type="Texture2D" uid="uid://bxbf0l1c7aqme" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 07.png" id="14_q2vua"]
-[ext_resource type="Texture2D" uid="uid://0yuq6wk6h1ya" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 03.png" id="15_ds50e"]
 [ext_resource type="Texture2D" uid="uid://b12kgf55ulrf1" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/01-Idle/Idle 08.png" id="15_omgjh"]
 [ext_resource type="Texture2D" uid="uid://bwfmw4nbs4yw8" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/04-Fall/Idle 09.png" id="16_f2r7c"]
 [ext_resource type="AudioStream" uid="uid://bfkqpct06rilo" path="res://assets-synced/sound/effects/209171__lukesharples__hagh.wav" id="16_ojq2l"]
-[ext_resource type="Texture2D" uid="uid://db8e5jjbtgihg" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 01.png" id="17_u0huc"]
-[ext_resource type="Texture2D" uid="uid://bhstu3bfmx2uh" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="18_1vox8"]
 [ext_resource type="Texture2D" uid="uid://bbr4deqmqve12" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/03-Jump/Jump 01.png" id="18_p5lmj"]
 [ext_resource type="Texture2D" uid="uid://mtio3v7bcafa" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/03-Jump/Jump 02.png" id="19_suwul"]
-[ext_resource type="Texture2D" uid="uid://buwjehv5fro1m" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="19_yg1rh"]
-[ext_resource type="Texture2D" uid="uid://5albphrei4bl" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="20_8wbog"]
 [ext_resource type="Texture2D" uid="uid://bo311kvbc7pfg" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/03-Jump/Jump 03.png" id="20_hx58i"]
-[ext_resource type="Texture2D" uid="uid://b8id38etgcl5f" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="21_jnsxm"]
-[ext_resource type="Texture2D" uid="uid://ckf6q7eqc508y" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="22_nr07j"]
+[ext_resource type="Texture2D" uid="uid://8vx62chetclw" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 01.png" id="23_0im0c"]
 [ext_resource type="PackedScene" uid="uid://blfohlos2vq15" path="res://scenes/dust/run_dust.tscn" id="23_qjaiv"]
 [ext_resource type="AudioStream" uid="uid://bhqg4vu16wnxp" path="res://assets-synced/sound/effects/209196__lukesharples__shoes1.wav" id="24_04b6s"]
+[ext_resource type="Texture2D" uid="uid://b4xjhf7xwqx2g" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 02.png" id="24_7c6cg"]
+[ext_resource type="Texture2D" uid="uid://dhwtglpqmhe46" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 03.png" id="25_3x73t"]
+[ext_resource type="Texture2D" uid="uid://dvobvmyy3nj3t" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 04.png" id="26_03ce0"]
+[ext_resource type="Texture2D" uid="uid://bahre2w5fi6xq" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 05.png" id="27_h88f5"]
+[ext_resource type="Texture2D" uid="uid://dgi6tkjqt0k08" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 06.png" id="28_1uxvs"]
 
 [sub_resource type="Animation" id="Animation_pjp6g"]
 length = 0.001
@@ -160,62 +157,19 @@ tracks/1/keys = {
 resource_name = "run"
 length = 0.6
 loop_mode = 1
-tracks/0/type = "value"
+tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
+tracks/0/path = NodePath("..")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("17_u0huc"), ExtResource("18_1vox8"), ExtResource("19_yg1rh"), ExtResource("20_8wbog"), ExtResource("21_jnsxm"), ExtResource("22_nr07j")]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("..")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [ExtResource("23_qjaiv")],
 "method": &"_spawn_dust"
 }]
-}
-tracks/2/type = "audio"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../AudioStreamPlayer2D")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"clips": [{
-"end_offset": 2.91193,
-"start_offset": 15.5,
-"stream": ExtResource("24_04b6s")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/2/use_blend = true
-
-[sub_resource type="Animation" id="Animation_1jd35"]
-resource_name = "jump_2"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("13_o0mrl"), ExtResource("14_0npdc"), ExtResource("15_ds50e")]
 }
 tracks/1/type = "audio"
 tracks/1/imported = false
@@ -225,13 +179,25 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_ojq2l")
+"end_offset": 2.91193,
+"start_offset": 15.5,
+"stream": ExtResource("24_04b6s")
 }],
 "times": PackedFloat32Array(0)
 }
 tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [ExtResource("23_0im0c"), ExtResource("24_7c6cg"), ExtResource("25_3x73t"), ExtResource("26_03ce0"), ExtResource("27_h88f5"), ExtResource("28_1uxvs")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_omd33"]
 _data = {
@@ -240,7 +206,6 @@ _data = {
 "ground": SubResource("Animation_j77wg"),
 "idle": SubResource("Animation_n4dgk"),
 "jump": SubResource("Animation_euxk7"),
-"jump_2": SubResource("Animation_1jd35"),
 "run": SubResource("Animation_34mon")
 }
 

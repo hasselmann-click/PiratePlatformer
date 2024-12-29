@@ -3,12 +3,12 @@ extends EditorScript
 
 const animationName = "run"
 const sprite_paths = [
-	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 01.png",
-	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 02.png",
-	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 03.png",
-	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 04.png",
-	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 05.png",
-	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Crabby/02-Run/Run 06.png"
+	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png",
+	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png",
+	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png",
+	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png",
+	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png",
+	"res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png"
 ]
 
 
@@ -45,6 +45,7 @@ func replace_textures_in_animation(animation: Animation, sprite_paths: Array):
 	var trackIdx = animation.add_track(Animation.TYPE_VALUE)
 	print(trackIdx)
 	animation.track_set_path(trackIdx, track_path)
+	animation.length = sprite_paths.size() * 0.1
 	# Add new tracks with the new textures
 	for spriteIdx in sprite_paths.size():
 		print(spriteIdx)

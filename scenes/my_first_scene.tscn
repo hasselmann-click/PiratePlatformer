@@ -1,31 +1,27 @@
-[gd_scene load_steps=5 format=3 uid="uid://cno22ff8hyawo"]
+[gd_scene load_steps=8 format=3 uid="uid://cno22ff8hyawo"]
 
 [ext_resource type="Texture2D" uid="uid://dwx5tykj3sbd" path="res://icon.svg" id="1_j2eyi"]
 [ext_resource type="PackedScene" uid="uid://bsmnpbo4nl6tt" path="res://scenes/characters/roger.tscn" id="1_qvi73"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_513sy"]
+[ext_resource type="PackedScene" uid="uid://dctdx5yesm2a2" path="res://scenes/characters/crabby.tscn" id="4_8ngld"]
+[ext_resource type="PackedScene" uid="uid://c0c1b631dliuq" path="res://scenes/characters/fierce_tooth.tscn" id="5_aqrru"]
+[ext_resource type="PackedScene" uid="uid://bydygnvq7ueu" path="res://scenes/characters/pink_star.tscn" id="6_4e5sp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2psy"]
 size = Vector2(128, 128)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(457, 284)
 metadata/_edit_horizontal_guides_ = [-136.0]
 
 [node name="Roger" parent="." instance=ExtResource("1_qvi73")]
-position = Vector2(407, 369)
+position = Vector2(-16, 271)
 speed = 16.0
 acceleration = 32.0
 deceleration = 128.0
 
-[node name="Player" type="Node" parent="Roger"]
-script = ExtResource("2_513sy")
-
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Hello World"
-
 [node name="Floor" type="Sprite2D" parent="."]
-position = Vector2(576, 584)
+position = Vector2(155, 398)
 scale = Vector2(10, 1)
 texture = ExtResource("1_j2eyi")
 
@@ -35,5 +31,17 @@ texture = ExtResource("1_j2eyi")
 shape = SubResource("RectangleShape2D_b2psy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(414, 435)
-zoom = Vector2(3, 3)
+position = Vector2(-6, 257)
+zoom = Vector2(2, 2)
+
+[node name="Crabby" parent="." instance=ExtResource("4_8ngld")]
+position = Vector2(105, 267)
+
+[node name="Fierce Tooth" parent="." instance=ExtResource("5_aqrru")]
+position = Vector2(43, 266)
+
+[node name="Pink Star" parent="." instance=ExtResource("6_4e5sp")]
+position = Vector2(-95, 277)
+
+[node name="Player" type="Node" parent="Pink Star"]
+script = ExtResource("2_513sy")

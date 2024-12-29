@@ -1,29 +1,33 @@
-[gd_scene load_steps=54 format=3 uid="uid://bydygnvq7ueu"]
+[gd_scene load_steps=58 format=3 uid="uid://bydygnvq7ueu"]
 
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_7lppi"]
 [ext_resource type="PackedScene" uid="uid://b2l4op0mw14p5" path="res://scenes/dust/jump_dust.tscn" id="2_vro1x"]
 [ext_resource type="Texture2D" uid="uid://cirfxttryfq3i" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="3_y8iwq"]
-[ext_resource type="Texture2D" uid="uid://ndrw33l2eao7" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/04-Fall/Fall 01.png" id="4_vsv8y"]
-[ext_resource type="Texture2D" uid="uid://7x8yfhcq4des" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/05-Ground/Ground 01.png" id="5_w7ujg"]
-[ext_resource type="Texture2D" uid="uid://bjt478jlhsl57" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/05-Ground/Ground 02.png" id="6_ika5a"]
+[ext_resource type="Texture2D" uid="uid://sb7ta4p2uhr5" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/04-Fall/Fall 01.png" id="4_4op13"]
+[ext_resource type="Texture2D" uid="uid://d06467e5nq0e6" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 01.png" id="5_t1mc4"]
+[ext_resource type="Texture2D" uid="uid://n5xitdq1l44q" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/05-Ground/Ground 02.png" id="6_qdmlc"]
 [ext_resource type="PackedScene" uid="uid://dkfimc17tfxho" path="res://scenes/dust/fall_dust.tscn" id="7_itiin"]
 [ext_resource type="AudioStream" uid="uid://8tpklvg3u3hy" path="res://assets-synced/sound/effects/209133__lukesharples__fall-to-the-floor.wav" id="8_gljr0"]
-[ext_resource type="Texture2D" uid="uid://cdggat5nsm81s" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="9_m6wsp"]
-[ext_resource type="Texture2D" uid="uid://banwt6avmnu7q" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="10_phv7p"]
-[ext_resource type="Texture2D" uid="uid://elxcpy6hn7p4" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="11_l7rd2"]
-[ext_resource type="Texture2D" uid="uid://dt3vn633fhniq" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" id="12_ckm65"]
-[ext_resource type="Texture2D" uid="uid://c2emi5bakuv74" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 01.png" id="13_wuf23"]
-[ext_resource type="Texture2D" uid="uid://biroemvrsrrpd" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 02.png" id="14_wxjb1"]
-[ext_resource type="Texture2D" uid="uid://0yuq6wk6h1ya" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 03.png" id="15_l2fwg"]
+[ext_resource type="Texture2D" uid="uid://cin6rpo0eestn" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 01.png" id="9_tkyg3"]
+[ext_resource type="Texture2D" uid="uid://cyndoai50bo63" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 02.png" id="10_w2qlv"]
+[ext_resource type="Texture2D" uid="uid://deipv4q44rfty" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 03.png" id="11_2auh6"]
+[ext_resource type="Texture2D" uid="uid://dm0u8s6nc7vk3" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 04.png" id="12_74cti"]
+[ext_resource type="Texture2D" uid="uid://dgm4qg7rpjtpt" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 05.png" id="13_d1y72"]
+[ext_resource type="Texture2D" uid="uid://duee5tolnlwxe" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 06.png" id="14_tdfn3"]
+[ext_resource type="Texture2D" uid="uid://dqf4lxnygt0ph" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 07.png" id="15_c83dk"]
 [ext_resource type="AudioStream" uid="uid://bfkqpct06rilo" path="res://assets-synced/sound/effects/209171__lukesharples__hagh.wav" id="16_51qac"]
-[ext_resource type="Texture2D" uid="uid://db8e5jjbtgihg" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 01.png" id="17_yccjq"]
-[ext_resource type="Texture2D" uid="uid://bhstu3bfmx2uh" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="18_g4eur"]
-[ext_resource type="Texture2D" uid="uid://buwjehv5fro1m" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="19_g4hma"]
-[ext_resource type="Texture2D" uid="uid://5albphrei4bl" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="20_l37mh"]
-[ext_resource type="Texture2D" uid="uid://b8id38etgcl5f" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="21_4rhia"]
-[ext_resource type="Texture2D" uid="uid://ckf6q7eqc508y" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="22_03sse"]
+[ext_resource type="Texture2D" uid="uid://djx27utm4brcf" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/01-Idle/Idle 08.png" id="16_evvp0"]
+[ext_resource type="Texture2D" uid="uid://suxbj4yshix5" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 01.png" id="18_hmuvv"]
+[ext_resource type="Texture2D" uid="uid://daw4uckosx7jn" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 02.png" id="19_4a22n"]
+[ext_resource type="Texture2D" uid="uid://ejek23ujgww5" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/03-Jump/Jump 03.png" id="20_djfxw"]
+[ext_resource type="Texture2D" uid="uid://brvmk6apvlutr" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 01.png" id="23_lgw8n"]
 [ext_resource type="PackedScene" uid="uid://blfohlos2vq15" path="res://scenes/dust/run_dust.tscn" id="23_xwmhe"]
+[ext_resource type="Texture2D" uid="uid://yhebsryukmtf" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 02.png" id="24_ehu3k"]
 [ext_resource type="AudioStream" uid="uid://bhqg4vu16wnxp" path="res://assets-synced/sound/effects/209196__lukesharples__shoes1.wav" id="24_eub0x"]
+[ext_resource type="Texture2D" uid="uid://bdaxf15s5jiyc" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 03.png" id="25_1iso5"]
+[ext_resource type="Texture2D" uid="uid://bcjs4dud1fn8g" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 04.png" id="26_5fm4l"]
+[ext_resource type="Texture2D" uid="uid://d3ifcw8rjtgkw" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 05.png" id="27_rni71"]
+[ext_resource type="Texture2D" uid="uid://3rpfhmsw4leg" path="res://assets-synced/Treasure Hunters/Treasure Hunters/The Crusty Crew/Sprites/Pink Star/02-Run/Run 06.png" id="28_bklsy"]
 
 [sub_resource type="Animation" id="Animation_pjp6g"]
 length = 0.001
@@ -53,7 +57,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("4_vsv8y")]
+"values": [ExtResource("4_4op13")]
 }
 
 [sub_resource type="Animation" id="Animation_j77wg"]
@@ -69,7 +73,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("5_w7ujg"), ExtResource("6_ika5a")]
+"values": [ExtResource("5_t1mc4"), ExtResource("6_qdmlc")]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -103,7 +107,7 @@ tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_n4dgk"]
 resource_name = "idle"
-length = 0.5
+length = 0.8
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -112,26 +116,60 @@ tracks/0/path = NodePath(".:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("3_y8iwq"), ExtResource("9_m6wsp"), ExtResource("10_phv7p"), ExtResource("11_l7rd2"), ExtResource("12_ckm65")]
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [ExtResource("9_tkyg3"), ExtResource("10_w2qlv"), ExtResource("11_2auh6"), ExtResource("12_74cti"), ExtResource("13_d1y72"), ExtResource("14_tdfn3"), ExtResource("15_c83dk"), ExtResource("16_evvp0")]
 }
 
 [sub_resource type="Animation" id="Animation_euxk7"]
 resource_name = "jump"
 length = 0.3
-tracks/0/type = "value"
+tracks/0/type = "audio"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
+tracks/0/path = NodePath("../AudioStreamPlayer2D")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_51qac")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("13_wuf23"), ExtResource("14_wxjb1"), ExtResource("15_l2fwg")]
+"update": 0,
+"values": [ExtResource("18_hmuvv"), ExtResource("19_4a22n"), ExtResource("20_djfxw")]
+}
+
+[sub_resource type="Animation" id="Animation_34mon"]
+resource_name = "run"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("23_xwmhe")],
+"method": &"_spawn_dust"
+}]
 }
 tracks/1/type = "audio"
 tracks/1/imported = false
@@ -141,59 +179,25 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("16_51qac")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/1/use_blend = true
-
-[sub_resource type="Animation" id="Animation_34mon"]
-resource_name = "run"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("17_yccjq"), ExtResource("18_g4eur"), ExtResource("19_g4hma"), ExtResource("20_l37mh"), ExtResource("21_4rhia"), ExtResource("22_03sse")]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("..")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [ExtResource("23_xwmhe")],
-"method": &"_spawn_dust"
-}]
-}
-tracks/2/type = "audio"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../AudioStreamPlayer2D")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"clips": [{
 "end_offset": 2.91193,
 "start_offset": 15.5,
 "stream": ExtResource("24_eub0x")
 }],
 "times": PackedFloat32Array(0)
 }
-tracks/2/use_blend = true
+tracks/1/use_blend = true
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [ExtResource("23_lgw8n"), ExtResource("24_ehu3k"), ExtResource("25_1iso5"), ExtResource("26_5fm4l"), ExtResource("27_rni71"), ExtResource("28_bklsy")]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_omd33"]
 _data = {
@@ -299,13 +303,14 @@ transitions = ["Start", "WithoutSword", SubResource("AnimationNodeStateMachineTr
 radius = 8.0
 height = 26.0
 
-[node name="Roger" type="CharacterBody2D"]
+[node name="Pink Star" type="CharacterBody2D"]
 script = ExtResource("1_7lppi")
 jump_dust = ExtResource("2_vro1x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -12)
 texture = ExtResource("3_y8iwq")
+flip_h = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 libraries = {
