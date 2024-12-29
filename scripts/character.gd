@@ -1,10 +1,13 @@
 extends CharacterBody2D
 class_name Character
 
+enum Direction { LEFT, RIGHT }
+
 @export_category("Locomotion")
 @export var speed: float = 8
 @export var acceleration: float = 16
 @export var deceleration: float = 32
+@export var initialDirection: Direction = Direction.RIGHT 
 
 @export_category("Jump")
 @export var jump_height: float = 2.5
@@ -35,11 +38,11 @@ func _ready():
 
 
 func face_left():
-	_sprite.flip_h = true
+	_sprite.flip_h = initialDirection == Direction.RIGHT
 
 
 func face_right():
-	_sprite.flip_h = false
+	_sprite.flip_h = initialDirection != Direction.RIGHT
 
 
 func run(direction: float):
