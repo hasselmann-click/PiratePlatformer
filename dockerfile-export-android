@@ -1,0 +1,38 @@
+# Use the latest Ubuntu image as base
+FROM ubuntu:24.04
+
+# Set environment variables
+ENV DEBIAN_FRONTEND=noninteractive
+ENV ANDROID_HOME=/opt/android-sdk
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV PATH=$PATH:$ANDROID_HOME/cmdline-tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin
+
+# Update and install dependencies
+RUN apt-get update && \
+    apt-get install -y wget unzip 
+
+# Download and install OpenJDK 17
+RUN apt-get install -y openjdk-17-jdk-headless
+
+# Source: https://godotengine.org/download/linux/
+# Download and install Godot v4.3
+RUN wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip -O /tmp/godot.zip && \
+    unzip /tmp/godot.zip -d /opt/godot && \
+    rm /tmp/godot.zip && \
+    # Create a symlink to the Godot executable
+    ln -s /opt/godot/Godot_v4.3-stable_linux.x86_64 /usr/local/bin/godot 
+
+# Download and install the Android command line tools
+RUN mkdir -p $ANDROID_HOME && \
+    wget https://dl.google.com/android/repository/commandlinetools-linux-9477386_latest.zip -O /tmp/cmdline-tools.zip && \
+    unzip /tmp/cmdline-tools.zip -d $ANDROID_HOME && \
+    rm /tmp/cmdline-tools.zip 
+    #&& \
+    #mv $ANDROID_HOME/cmdline-tools $ANDROID_HOME/latest
+
+# Accept licenses and install Android SDK packages
+RUN yes | sdkmanager --sdk_root=$ANDROID_HOME "platform-tools" "build-tools;34.0.0" "platforms;android-34" "cmdline-tools;latest" "cmake;3.10.2.4988404" "ndk;23.2.8568313"
+
+# Run Godot CLI commands
+# Note: This runs as root
+ENTRYPOINT ["godot"]
