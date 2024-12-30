@@ -11,6 +11,7 @@
 ### Android
 
 - Run `./export-android.sh`
+  - Don't run it in Git Bash. This will mess up the paths in the container.
 - This will build and run a docker container to export the project to an Android APK
   - Dockerfile: `./dockerfile-export-android`
 - You can update the export path in the script to export to a different location

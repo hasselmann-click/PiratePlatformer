@@ -5,7 +5,8 @@ FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 ENV ANDROID_HOME=/opt/android-sdk
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-ENV PATH=$PATH:$ANDROID_HOME/cmdline-tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin
+ENV GODOT_INSTALL=/opt/godot
+ENV PATH=$PATH:$ANDROID_HOME/cmdline-tools/bin:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin:$GODOT_INSTALL
 
 # Update and install dependencies
 RUN apt-get update && \
@@ -19,8 +20,8 @@ RUN apt-get install -y openjdk-17-jdk-headless
 RUN wget https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip -O /tmp/godot.zip && \
     unzip /tmp/godot.zip -d /opt/godot && \
     rm /tmp/godot.zip && \
-    # Create a symlink to the Godot executable
-    ln -s /opt/godot/Godot_v4.3-stable_linux.x86_64 /usr/local/bin/godot 
+    # rename godot executable
+    mv /opt/godot/Godot_v4.3-stable_linux.x86_64 /opt/godot/godot
 
 # Download and install the Android command line tools
 RUN mkdir -p $ANDROID_HOME && \
