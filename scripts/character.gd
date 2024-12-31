@@ -2,18 +2,24 @@ extends CharacterBody2D
 class_name Character
 
 enum Direction { LEFT, RIGHT }
+signal changed_direction(direction: Direction)
+signal landed(floor_height: float)
 
 @export_category("Locomotion")
 @export var speed: float = 8
 @export var acceleration: float = 16
 @export var deceleration: float = 32
-@export var initialDirection: Direction = Direction.RIGHT 
 
 @export_category("Jump")
 @export var jump_height: float = 2.5
 @export var air_control: float = 0.5
 @export var jump_dust: PackedScene
 
+@export_category("Sprite")
+@export var initialDirection: Direction = Direction.RIGHT
+
+@onready var _was_on_floor: bool = is_on_floor()
+@onready var currentDirection: Direction = initialDirection
 @onready var _sprite: Sprite2D = $Sprite2D
 
 var _jump_velocity: float
@@ -38,11 +44,15 @@ func _ready():
 
 
 func face_left():
+	currentDirection = Direction.LEFT
 	_sprite.flip_h = initialDirection == Direction.RIGHT
+	changed_direction.emit(currentDirection)
 
 
 func face_right():
+	currentDirection = Direction.RIGHT
 	_sprite.flip_h = initialDirection != Direction.RIGHT
+	changed_direction.emit(currentDirection)
 
 
 func run(direction: float):
@@ -61,9 +71,9 @@ func stop_jump():
 
 
 func _physics_process(delta: float) -> void:
-	if sign(_direction) == 1:
+	if currentDirection == Direction.LEFT && sign(_direction) == 1:
 		face_right()
-	elif sign(_direction) == -1:
+	elif currentDirection == Direction.RIGHT && sign(_direction) == -1:
 		face_left()
 
 	# update gravity (which won't be necessary for this game)
@@ -76,7 +86,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		_air_physics(delta)
 
+	_was_on_floor = is_on_floor()
 	move_and_slide()
+	if not _was_on_floor && is_on_floor():
+		_landed()
+
+
+func _landed():
+	landed.emit(position.y)
 
 
 func _air_physics(delta: float):

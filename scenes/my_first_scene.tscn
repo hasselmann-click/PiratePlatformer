@@ -1,6 +1,7 @@
 [gd_scene load_steps=16 format=4 uid="uid://cno22ff8hyawo"]
 
 [ext_resource type="Texture2D" uid="uid://dwx5tykj3sbd" path="res://icon.svg" id="1_j2eyi"]
+[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="1_javf2"]
 [ext_resource type="PackedScene" uid="uid://bsmnpbo4nl6tt" path="res://scenes/characters/roger.tscn" id="1_qvi73"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_513sy"]
 [ext_resource type="PackedScene" uid="uid://dctdx5yesm2a2" path="res://scenes/characters/crabby.tscn" id="4_8ngld"]
@@ -10,9 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cp1ik3j5fa0k" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="8_e24q4"]
 [ext_resource type="Texture2D" uid="uid://cv4uok4wmcg8" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png" id="9_8i8am"]
 [ext_resource type="PackedScene" uid="uid://bint4ka0upnjf" path="res://scenes/decorations/palm_tree.tscn" id="10_eg22g"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2psy"]
-size = Vector2(128, 128)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qkx8f"]
 texture = ExtResource("8_e24q4")
@@ -421,27 +419,43 @@ sources/0 = SubResource("TileSetAtlasSource_r3vi3")
 position = Vector2(457, 284)
 metadata/_edit_horizontal_guides_ = [-136.0]
 
-[node name="Floor" type="Sprite2D" parent="."]
-position = Vector2(155, 398)
-scale = Vector2(10, 1)
-texture = ExtResource("1_j2eyi")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Floor"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor/StaticBody2D"]
-shape = SubResource("RectangleShape2D_b2psy")
-
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("_subject")]
 position = Vector2(-6, 257)
 zoom = Vector2(2, 2)
+script = ExtResource("1_javf2")
+_subject = NodePath("../Roger")
 
 [node name="DebugInfo" type="Label" parent="Camera2D"]
+z_index = 3
 offset_left = -222.0
 offset_top = -112.0
 offset_right = -181.0
 offset_bottom = -89.0
 text = "FPS 0"
 script = ExtResource("7_7udv5")
+
+[node name="TouchControls" type="Node2D" parent="Camera2D"]
+
+[node name="right" type="TouchScreenButton" parent="Camera2D/TouchControls"]
+z_index = 3
+position = Vector2(-163, 75)
+scale = Vector2(0.375, 0.125)
+texture_normal = ExtResource("1_j2eyi")
+action = "run_right"
+
+[node name="left" type="TouchScreenButton" parent="Camera2D/TouchControls"]
+z_index = 3
+position = Vector2(-227, 75)
+scale = Vector2(0.375, 0.125)
+texture_normal = ExtResource("1_j2eyi")
+action = "run_left"
+
+[node name="jump" type="TouchScreenButton" parent="Camera2D/TouchControls"]
+z_index = 3
+position = Vector2(157, 75)
+scale = Vector2(0.375, 0.125)
+texture_normal = ExtResource("1_j2eyi")
+action = "jump"
 
 [node name="Roger" parent="." instance=ExtResource("1_qvi73")]
 position = Vector2(-15, 166)
@@ -468,7 +482,7 @@ initialDirection = 0
 
 [node name="Ground" type="TileMapLayer" parent="Environment"]
 use_parent_material = true
-tile_map_data = PackedByteArray("AAD+/wYAAAAAAAQAAAD//wYAAAAPAAAAAAAAAAYAAAACAAQAAAD//wcAAAAEAAIAAAAAAAkAAAAAAAAAAAABAAkAAAABAAAAAAAAAAoAAAAAAAIAAAABAAoAAAABAAIAAAACAAkAAAABAAAAAAADAAkAAAABAAAAAAAEAAkAAAABAAAAAAAFAAkAAAABAAAAAAAGAAkAAAABAAAAAAAFAAoAAAABAAIAAAAEAAoAAAABAAIAAAADAAoAAAABAAIAAAACAAoAAAABAAIAAAAGAAoAAAABAAIAAAAHAAoAAAABAAIAAAAIAAoAAAABAAIAAAAJAAoAAAABAAIAAAAJAAkAAAABAAAAAAAIAAkAAAABAAAAAAAHAAkAAAABAAAAAAAKAAkAAAABAAAAAAALAAkAAAABAAAAAAAMAAkAAAABAAAAAAANAAkAAAABAAAAAAAOAAkAAAABAAAAAAAPAAkAAAAHAAEAAAAQAAkAAAACAAEAAAAMAAoAAAABAAIAAAALAAoAAAABAAIAAAAKAAoAAAABAAIAAAANAAoAAAABAAIAAAAOAAoAAAABAAIAAAAPAAoAAAABAAIAAAAQAAoAAAAJAAQAAAAQAAgAAAAHAAQAAAARAAcAAAAKAAQAAAARAAYAAAAAAAAAAAAQAAcAAAAPAAMAAAAPAAgAAAAAAAAAAAASAAYAAAAHAAEAAAASAAUAAAAAAAAAAAATAAUAAAACAAAAAAASAAcAAAABAAIAAAATAAcAAAACAAIAAAATAAYAAAACAAEAAAARAAoAAAABAAQAAAASAAoAAAABAAQAAAATAAoAAAABAAQAAAAUAAoAAAABAAQAAAAVAAoAAAABAAQAAAAWAAoAAAACAAQAAAA=")
+tile_map_data = PackedByteArray("AAD+/wYAAAAAAAQAAAD//wYAAAAPAAAAAAAAAAYAAAACAAQAAAD//wcAAAAEAAEAAAAAAAkAAAAKAAMAAAABAAkAAAABAAAAAAAAAAoAAAAAAAIAAAABAAoAAAABAAIAAAACAAkAAAABAAAAAAADAAkAAAABAAAAAAAEAAkAAAABAAAAAAAFAAkAAAAJAAAAAAAGAAkAAAABAAAAAAAFAAoAAAABAAIAAAAEAAoAAAABAAIAAAADAAoAAAABAAIAAAACAAoAAAABAAIAAAAGAAoAAAABAAIAAAAHAAoAAAABAAIAAAAIAAoAAAABAAIAAAAJAAoAAAABAAIAAAAJAAkAAAABAAAAAAAIAAkAAAABAAAAAAAHAAkAAAABAAAAAAAKAAkAAAABAAAAAAALAAkAAAABAAAAAAAMAAkAAAABAAAAAAANAAkAAAABAAAAAAAOAAkAAAABAAAAAAAPAAkAAAAHAAEAAAAQAAkAAAACAAEAAAAMAAoAAAABAAIAAAALAAoAAAABAAIAAAAKAAoAAAABAAIAAAANAAoAAAABAAIAAAAOAAoAAAABAAIAAAAPAAoAAAABAAIAAAAQAAoAAAAJAAQAAAAQAAgAAAAHAAQAAAARAAcAAAAKAAQAAAARAAYAAAAAAAAAAAAQAAcAAAAPAAMAAAAPAAgAAAAAAAAAAAASAAYAAAAHAAEAAAASAAUAAAAAAAAAAAATAAUAAAACAAAAAAASAAcAAAABAAIAAAATAAcAAAACAAIAAAATAAYAAAACAAEAAAARAAoAAAABAAQAAAASAAoAAAABAAQAAAATAAoAAAABAAQAAAAUAAoAAAABAAQAAAAVAAoAAAAKAAQAAAAWAAoAAAABAAIAAAD//wkAAAAMAAQAAAD+/wkAAAABAAQAAAD9/wkAAAABAAQAAAD8/wkAAAABAAQAAAD7/wkAAAAJAAQAAAD6/wkAAAABAAIAAAD5/wkAAAAAAAIAAAD5/wgAAAAAAAAAAAD6/wgAAAAJAAAAAAD6/wcAAAAEAAEAAAD6/wYAAAANAAQAAAD5/wYAAAAAAAQAAAD6/wUAAAAEAAEAAAD6/wQAAAAEAAEAAAD6/wMAAAAEAAEAAAD6/wIAAAAEAAAAAAAXAAoAAAABAAIAAAAYAAoAAAACAAIAAAAYAAkAAAACAAEAAAAYAAgAAAAHAAMAAAAYAAcAAAAHAAQAAAAYAAYAAAAEAAEAAAAYAAUAAAAEAAEAAAAYAAQAAAAEAAEAAAAYAAMAAAAEAAEAAAAYAAIAAAAEAAAAAAAVAAkAAAAAAAAAAAAWAAgAAAAAAAAAAAAXAAcAAAAAAAAAAAAXAAgAAAAHAAEAAAAXAAkAAAABAAEAAAAWAAkAAAAHAAEAAAD//wgAAAAEAAEAAAD7/wgAAAACAAAAAAAFAAgAAAAEAAAAAAA=")
 tile_set = SubResource("TileSet_fwv4c")
 
 [node name="FrontDecorations" type="TileMapLayer" parent="Environment"]
