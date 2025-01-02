@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://bc60efyoierqr"]
+
+[ext_resource type="Script" path="res://scripts/water.gd" id="1_lgp3j"]
+[ext_resource type="PackedScene" uid="uid://c1xshfck2ysvo" path="res://scenes/dust/splash.tscn" id="2_fnrpk"]
+[ext_resource type="Texture2D" uid="uid://cj4ljkew2127e" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/1.png" id="3_sotqs"]
+[ext_resource type="Texture2D" uid="uid://y632a8s1oly1" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/2.png" id="4_hddlc"]
+[ext_resource type="Texture2D" uid="uid://xf4tbptqsb6e" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/3.png" id="5_88246"]
+[ext_resource type="Texture2D" uid="uid://dp104owojfukx" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/4.png" id="6_oumxp"]
+[ext_resource type="Texture2D" uid="uid://sgurajm6ywiu" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Merchant Ship/Sprites/Water/Water/Bottom/1.png" id="7_86rik"]
+[ext_resource type="AudioStream" uid="uid://dpig2gl5ifwgf" path="res://assets-synced/sound/effects/406087__yin_yang_jake007__water-splash.wav" id="8_o7fgo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_np4m4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_sotqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hddlc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_88246")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oumxp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r6n80"]
+a = Vector2(144, -8)
+b = Vector2(-48, -8)
+
+[node name="Water" type="Area2D"]
+z_index = 10
+script = ExtResource("1_lgp3j")
+_splash = ExtResource("2_fnrpk")
+
+[node name="Surface" type="Node2D" parent="."]
+position = Vector2(48, 8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Surface"]
+sprite_frames = SubResource("SpriteFrames_np4m4")
+autoplay = "default"
+frame_progress = 0.49631
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(96, 0)
+sprite_frames = SubResource("SpriteFrames_np4m4")
+autoplay = "default"
+frame_progress = 0.645117
+
+[node name="Bottom" type="Sprite2D" parent="."]
+position = Vector2(96, 40)
+scale = Vector2(2, 1)
+texture = ExtResource("7_86rik")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_o7fgo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(48, 8)
+shape = SubResource("SegmentShape2D_r6n80")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
