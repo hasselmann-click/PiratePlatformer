@@ -1,21 +1,18 @@
-[gd_scene load_steps=19 format=4 uid="uid://cno22ff8hyawo"]
+[gd_scene load_steps=18 format=4 uid="uid://cno22ff8hyawo"]
 
 [ext_resource type="Texture2D" uid="uid://dwx5tykj3sbd" path="res://icon.svg" id="1_j2eyi"]
 [ext_resource type="Script" path="res://scripts/camera_2d.gd" id="1_javf2"]
 [ext_resource type="PackedScene" uid="uid://bsmnpbo4nl6tt" path="res://scenes/characters/roger.tscn" id="1_qvi73"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="2_513sy"]
+[ext_resource type="PackedScene" uid="uid://fsqby1kkel8n" path="res://scenes/debug/debug_info.tscn" id="2_oep3p"]
 [ext_resource type="PackedScene" uid="uid://dctdx5yesm2a2" path="res://scenes/characters/crabby.tscn" id="4_8ngld"]
 [ext_resource type="PackedScene" uid="uid://c4ysqogxgejj5" path="res://scenes/background/background.tscn" id="4_mcdon"]
 [ext_resource type="PackedScene" uid="uid://c0c1b631dliuq" path="res://scenes/characters/fierce_tooth.tscn" id="5_aqrru"]
 [ext_resource type="PackedScene" uid="uid://bydygnvq7ueu" path="res://scenes/characters/pink_star.tscn" id="6_4e5sp"]
-[ext_resource type="Script" path="res://scripts/tools/debug_info.gd" id="7_7udv5"]
 [ext_resource type="Texture2D" uid="uid://cp1ik3j5fa0k" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Terrain/Terrain (32x32).png" id="8_e24q4"]
 [ext_resource type="Texture2D" uid="uid://cv4uok4wmcg8" path="res://assets-synced/Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Front Palm Trees/Front Palm Bottom and Grass (32x32).png" id="9_8i8am"]
 [ext_resource type="PackedScene" uid="uid://bint4ka0upnjf" path="res://scenes/decorations/palm_tree.tscn" id="10_eg22g"]
 [ext_resource type="PackedScene" uid="uid://bc60efyoierqr" path="res://scenes/water.tscn" id="13_dt8ow"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_omuuw"]
-font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qkx8f"]
 texture = ExtResource("8_e24q4")
@@ -430,15 +427,7 @@ script = ExtResource("1_javf2")
 _subject = NodePath("../Roger")
 _offset = Vector2(64, -32)
 
-[node name="DebugInfo" type="Label" parent="Camera2D"]
-z_index = 3
-offset_left = -323.0
-offset_top = -165.0
-offset_right = -282.0
-offset_bottom = -142.0
-text = "FPS 0000"
-label_settings = SubResource("LabelSettings_omuuw")
-script = ExtResource("7_7udv5")
+[node name="DebugInfo" parent="Camera2D" instance=ExtResource("2_oep3p")]
 
 [node name="TouchControls" type="Node2D" parent="Camera2D"]
 
