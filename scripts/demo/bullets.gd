@@ -20,6 +20,9 @@ class Bullet:
 
 
 func _ready() -> void:
+	
+	print("Using %s bullets" % BulletCount)
+	
 	player.body_shape_entered.connect(_on_collision)
 
 	# TODO: how to instantiate custom shapes?
@@ -101,8 +104,8 @@ func _draw() -> void:
 
 # clean up (free all rids)
 func _exit_tree() -> void:
-	for bullet in bullets:
-		PhysicsServer2D.free_rid(bullet.body)
+	for bullet in bullets.keys():
+		PhysicsServer2D.free_rid(bullet)
 
 	PhysicsServer2D.free_rid(shape)
 	bullets.clear()

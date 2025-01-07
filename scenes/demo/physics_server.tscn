@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://cn8slqtsaxrka"]
+
+[ext_resource type="Script" path="res://scripts/demo/bullets.gd" id="1_wbw5e"]
+[ext_resource type="Script" path="res://scripts/demo/player.gd" id="2_vwvgy"]
+[ext_resource type="Texture2D" uid="uid://pryeevxqkrqt" path="res://assets-synced/demo/face_happy.png" id="3_htnij"]
+[ext_resource type="Texture2D" uid="uid://dia2nwi3wt0bp" path="res://assets-synced/demo/face_sad.png" id="4_okj20"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q6umx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_htnij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_okj20")
+}],
+"loop": false,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wcn7k"]
+radius = 27.0
+
+[node name="PhysicsServer" type="Node2D"]
+script = ExtResource("1_wbw5e")
+BulletCount = 5000
+
+[node name="Player" type="Area2D" parent="."]
+position = Vector2(906, 495)
+script = ExtResource("2_vwvgy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_q6umx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_wcn7k")
